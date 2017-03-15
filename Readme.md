@@ -52,3 +52,13 @@ previously halted in order to examine its state. This file must be exactly 128 k
 the target was previously halted in order to examine its state.
 This file must be exactly 64 bytes in size.
 
+Normally, the user of the *troll* debugger only specifies the compiled *ELF*
+file of the program that needs to be debugged, and the *troll* automatically
+executes the appropriate external utilities (e.g., `objcopy`, `objdump`, etc.)
+in order to create the files mentioned above, so the user does not normally
+bother at all about these files.
+In the *static test-drive operation mode* all of these files have been prebuilt,
+so that the *troll* needs not execute any external utilities.
+This is in order to minimize the dependency of the *troll* on any external utility programs,
+and to make testing the *troll* as easy and straightforward as possible.
+
